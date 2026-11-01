@@ -54,7 +54,7 @@ The upstream `mask` field is accepted but ignored here. To restrict the edit reg
 
 ```bash
 cd ~/.dsh/profiles/desktop
-pnpm add github:fred-chen/dsh-image-gen#v0.1.0
+pnpm add github:fred-chen/dsh-image-gen#v0.1.1
 ```
 
 Add `dsh-image-gen` to `dsh.profile.bundles` in the profile `package.json`, and add the insert row from this package's `cordis.patch.yml` to the profile patch. Restart DSH and hard-refresh the browser.

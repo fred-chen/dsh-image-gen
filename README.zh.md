@@ -78,7 +78,7 @@ DeepSeek Harness 图像插件：把 **文生图、图生图、图片编辑** 接
 
 ```bash
 cd ~/.dsh/profiles/desktop
-pnpm add github:fred-chen/dsh-image-gen#v0.1.0
+pnpm add github:fred-chen/dsh-image-gen#v0.1.1
 ```
 
 然后把 `dsh-image-gen` 加入该 profile `package.json` 的 `dsh.profile.bundles`，并把 `cordis.patch.yml` 的 insert 行加入 profile patch。示例：

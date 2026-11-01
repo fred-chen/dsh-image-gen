@@ -1,6 +1,6 @@
 {
   "name": "dsh-image-gen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness 图像插件：文生图、图生图、图片编辑，默认端点 http://ai4090:8080/v1（Qwen-Image-2.1-Turbo）。提供 image_generate / image_to_image / image_edit 三个工具、左侧栏图像工作室面板与设置页。",
   "type": "module",
   "main": "lib/index.js",
