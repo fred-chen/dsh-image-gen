@@ -57,7 +57,7 @@ cd ~/.dsh/profiles/desktop
 pnpm add github:fred-chen/dsh-image-gen#v0.1.1
 ```
 
-Add `dsh-image-gen` to `dsh.profile.bundles` in the profile `package.json`, and add the insert row from this package's `cordis.patch.yml` to the profile patch. Restart DSH and hard-refresh the browser.
+Add `dsh-image-gen` to `dsh.profile.bundles` in the profile `package.json`. The package's own `cordis.patch.yml` inserts the `image-gen` row at bundle level; add an optional same-id override row to the profile patch if you want different defaults. Restart DSH and hard-refresh the browser.
 
 ## Configuration
 

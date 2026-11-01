@@ -81,7 +81,7 @@ cd ~/.dsh/profiles/desktop
 pnpm add github:fred-chen/dsh-image-gen#v0.1.1
 ```
 
-然后把 `dsh-image-gen` 加入该 profile `package.json` 的 `dsh.profile.bundles`，并把 `cordis.patch.yml` 的 insert 行加入 profile patch。示例：
+然后把 `dsh-image-gen` 加入该 profile `package.json` 的 `dsh.profile.bundles`。插件自带的 `cordis.patch.yml` 会随 bundle 层插入 `image-gen` 行；如需覆盖默认配置，再在 profile 的 `cordis.patch.yml` 中加入同 id 的覆盖行。示例：
 
 ```json
 {
@@ -97,19 +97,18 @@ pnpm add github:fred-chen/dsh-image-gen#v0.1.1
 ```
 
 ```yaml
-- insert:
-    - id: image-gen
-      name: dsh-image-gen
-      config:
-        enabled: true
-        endpoint: http://ai4090:8080/v1
-        model: Qwen-Image-2.1-Turbo
-        size: 1024x1024
-        n: 1
-        outputDir: .dsh-image-gen
-        timeoutSec: 300
-        preserveInputSize: true
-        negativePrompt: ""
+- id: image-gen
+  name: dsh-image-gen
+  config:
+    enabled: true
+    endpoint: http://ai4090:8080/v1
+    model: Qwen-Image-2.1-Turbo
+    size: 1024x1024
+    n: 1
+    outputDir: .dsh-image-gen
+    timeoutSec: 300
+    preserveInputSize: true
+    negativePrompt: ""
 ```
 
 重启 `dsh web` / DSH 桌面应用，然后浏览器硬刷新（Cmd/Ctrl+Shift+R）。
