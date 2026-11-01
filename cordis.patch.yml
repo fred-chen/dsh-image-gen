@@ -1,0 +1,13 @@
+- insert:
+    - id: image-gen
+      name: dsh-image-gen
+      config:
+        enabled: true
+        endpoint: http://ai4090:8080/v1
+        model: Qwen-Image-2.1-Turbo
+        size: 1024x1024
+        n: 1
+        outputDir: .dsh-image-gen
+        timeoutSec: 300
+        preserveInputSize: true
+        negativePrompt: ""
